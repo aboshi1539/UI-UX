@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* ===========================
+   カスタムテーマ設定
+   =========================== */
+@theme {
+  /* メインカラーパレット */
+  --color-primary: #1a1a2e;
+  --color-primary-light: #16213e;
+  --color-accent: #c9a96e;
+  --color-accent-light: #dfc59b;
+  --color-accent-dark: #a6853e;
+
+  /* カテゴリカラー */
+  --color-festival: #e63946;
+  --color-festival-dark: #b82e39;
+  --color-history: #457b9d;
+  --color-history-dark: #2d5f7e;
+  --color-culture: #6b4c8a;
+  --color-culture-dark: #4e366a;
+
+  /* テキストカラー */
+  --color-text-primary: #f8f9fa;
+  --color-text-secondary: #adb5bd;
+  --color-text-muted: #6c757d;
+
+  /* フォントファミリー */
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-serif: "Noto Serif JP", serif;
+}
+
+/* ===========================
+   グローバルスタイル
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #0a0a0f;
+  color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   スクロールバーのカスタマイズ
+   =========================== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ===========================
+   セレクションカラー
+   =========================== */
+::selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #fff;
+}
+
+/* ===========================
+   カスタムアニメーション
+   =========================== */
+
+/* スクロールインジケーター用ラインアニメーション */
+@keyframes scroll-line {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2s ease-in-out infinite;
+}
+
+/* フローティングアニメーション */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* パルスグロー効果 */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* シマーアニメーション（テキストのきらめき） */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ===========================
+   ページ読み込みアニメーション
+   =========================== */
+@keyframes page-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#root {
+  animation: page-load 0.6s ease-out;
+}
+
+/* ===========================
+   パフォーマンス最適化
+   =========================== */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* GPU アクセラレーション */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ===========================
+   詳細ページ用の独自スタイル
+   =========================== */
+.detail-description h2 {
+  margin-bottom: 48px; /* タイトルと最初の文章の間隔 */
+}
+
+.detail-description p {
+  margin-bottom: 12px; /* 文章同士の間隔 */
+}
+
+.detail-description p:last-child {
+  margin-bottom: 12px;
+}
+
+/* ===========================
+   トップページ: 知る、高砂。セクションの中央揃え
+   =========================== */
+.intro-center-text {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+
+/* タイトル部分のみ右にずらす */
+.intro-title-shift {
+  padding-left: 0 !important;
+  margin-bottom: 12px;
+}
+
+.intro-footer-shift {
+  padding-left: 0px !important;
+  margin-bottom: 12px;
+}
