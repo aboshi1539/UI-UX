@@ -208,7 +208,7 @@ export default function CultureSection({ imageSrc }) {
 
             {/* キーワードタグ */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '24px 0 32px' }}>
-              {['能・狂言', '三味線', '茶道・華道', '書道', '謡曲'].map(tag => (
+              {[].map(tag => (
                 <span key={tag} style={{
                   fontSize: '12px',
                   padding: '5px 14px',

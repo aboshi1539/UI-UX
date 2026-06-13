@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
  */
 export default function HistorySection({ imageSrc }) {
   const [headerRef, headerVisible] = useScrollAnimation({ threshold: 0.2 });
-  const [imageRef, imageVisible]   = useScrollAnimation({ threshold: 0.15 });
-  const [textRef, textVisible]     = useScrollAnimation({ threshold: 0.15 });
+  const [imageRef, imageVisible] = useScrollAnimation({ threshold: 0.15 });
+  const [textRef, textVisible] = useScrollAnimation({ threshold: 0.15 });
   const [parallaxRef, parallaxOffset] = useParallax(0.15);
 
   return (
@@ -19,7 +19,7 @@ export default function HistorySection({ imageSrc }) {
         position: 'relative',
         overflow: 'hidden',
         background: 'linear-gradient(180deg, #0a0a0f 0%, #060f18 50%, #0a0a0f 100%)',
-        borderTop:    '1px solid #457b9d15',
+        borderTop: '1px solid #457b9d15',
         borderBottom: '1px solid #457b9d15',
         padding: '80px 0 100px',
       }}
@@ -48,7 +48,7 @@ export default function HistorySection({ imageSrc }) {
             textAlign: 'center',
             marginBottom: '64px',
             transition: 'all 0.7s ease',
-            opacity:   headerVisible ? 1 : 0,
+            opacity: headerVisible ? 1 : 0,
             transform: headerVisible ? 'translateY(0)' : 'translateY(24px)',
           }}
         >
@@ -78,7 +78,7 @@ export default function HistorySection({ imageSrc }) {
               lineHeight: '1',
               margin: 0,
               transition: 'all 1s ease 0.2s',
-              opacity:   headerVisible ? 1 : 0,
+              opacity: headerVisible ? 1 : 0,
               transform: headerVisible ? 'translateY(0)' : 'translateY(32px)',
             }}
           >
@@ -100,7 +100,7 @@ export default function HistorySection({ imageSrc }) {
             style={{
               flex: '1 1 360px',
               transition: 'all 0.8s ease',
-              opacity:   textVisible ? 1 : 0,
+              opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(28px)',
             }}
           >
@@ -119,7 +119,7 @@ export default function HistorySection({ imageSrc }) {
               lineHeight: '1.5',
               marginBottom: '20px',
               transition: 'all 0.7s ease',
-              opacity:   textVisible ? 1 : 0,
+              opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(20px)',
             }}>
               石の宝殿<br />
@@ -133,7 +133,7 @@ export default function HistorySection({ imageSrc }) {
               fontWeight: '300',
               marginBottom: '16px',
               transition: 'all 0.7s ease 0.15s',
-              opacity:   textVisible ? 1 : 0,
+              opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(20px)',
             }}>
               生石神社（おうしこじんじゃ）のご神体として祀られている巨大な石。日本でも特に有名な“謎の巨石遺跡”として知られています。
@@ -142,7 +142,7 @@ export default function HistorySection({ imageSrc }) {
 
             {/* キーワードタグ */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '24px 0 32px' }}>
-              {['生石神社', '巨石遺跡', '天の浮石', '日本三奇'].map(tag => (
+              {[].map(tag => (
                 <span key={tag} style={{
                   fontSize: '12px',
                   padding: '5px 14px',
@@ -159,7 +159,7 @@ export default function HistorySection({ imageSrc }) {
             {/* 詳細リンクボタン */}
             <div style={{
               transition: 'all 0.7s ease 0.3s',
-              opacity:   textVisible ? 1 : 0,
+              opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(20px)',
             }}>
               <Link
@@ -202,7 +202,7 @@ export default function HistorySection({ imageSrc }) {
             style={{
               flex: '1 1 480px',
               transition: 'all 1.2s ease',
-              opacity:   imageVisible ? 1 : 0,
+              opacity: imageVisible ? 1 : 0,
               transform: imageVisible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.97)',
             }}
           >

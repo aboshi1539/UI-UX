@@ -208,7 +208,7 @@ export default function FestivalSection({ imageSrc }) {
 
             {/* キーワードタグ */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', margin: '24px 0 32px' }}>
-              {['布団屋台', '竹割り', '一ツ物神事', '播州最大級'].map(tag => (
+              {[].map(tag => (
                 <span key={tag} style={{
                   fontSize: '12px',
                   padding: '5px 14px',
