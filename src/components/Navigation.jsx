@@ -13,7 +13,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // 詳細ページかどうかを判定
-  const isDetailsPage = ['/festival', '/history', '/culture'].includes(location.pathname);
+  const isDetailsPage = ['/festival', '/history', '/culture', '/yassa'].includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {

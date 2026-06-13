@@ -260,6 +260,65 @@ export default function HistorySection({ imageSrc }) {
                 opacity: 0.12, filter: 'blur(4px)',
               }} />
             </div>
+
+            {/* 日本三奇リンク */}
+            <Link
+              to="/mystery-rock"
+              className="group"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '12px',
+                marginTop: '24px',
+                padding: '14px 20px',
+                borderRadius: '12px',
+                border: '1px solid #457b9d30',
+                background: 'linear-gradient(135deg, #060f18 0%, #0c1926 60%, #0a0a0f 100%)',
+                textDecoration: 'none',
+                transition: 'all 0.35s ease',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.borderColor = '#457b9d60';
+                e.currentTarget.style.boxShadow = '0 12px 40px #457b9d18';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = '#457b9d30';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div>
+                <span style={{
+                  fontSize: '10px',
+                  letterSpacing: '0.2em',
+                  color: '#6aafd6',
+                  fontWeight: '600',
+                }}>
+                  MYSTERY
+                </span>
+                <p style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: '#f8f9fa',
+                  margin: '4px 0 0',
+                }}>
+                  日本三奇<span style={{ color: '#6aafd6', fontSize: '0.85em', marginLeft: '6px', fontWeight: '400' }}>を探る →</span>
+                </p>
+              </div>
+              <svg
+                className="group-hover:translate-x-1 transition-transform"
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#457b9d"
+                style={{ flexShrink: 0 }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>

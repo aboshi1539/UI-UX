@@ -194,6 +194,7 @@ export default function HistoryDetails() {
                 }}
               />
             </div>
+
           </div>
 
           {/* 説明文エリア */}
@@ -222,6 +223,85 @@ export default function HistoryDetails() {
                 悠久の歴史を感じることができます。
               </p>
             </div>
+
+            {/* 日本三奇 詳細ページへのリンクカード */}
+            <Link
+              to="/mystery-rock"
+              className="group"
+              style={{
+                display: 'block',
+                textDecoration: 'none',
+                marginTop: '32px',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                border: '1px solid #457b9d30',
+                background: 'linear-gradient(135deg, #060f18 0%, #0c1926 50%, #0a0a0f 100%)',
+                transition: 'all 0.4s ease',
+                position: 'relative',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.borderColor = '#457b9d60';
+                e.currentTarget.style.boxShadow = '0 16px 50px #457b9d20';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = '#457b9d30';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              {/* 上端カラーバー */}
+              <div style={{ height: '3px', background: 'linear-gradient(to right, #457b9d, #6aafd6, #7cb893, #c49a6c)' }} />
+              <div style={{ padding: '20px 24px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                      <span style={{
+                        fontSize: '10px',
+                        letterSpacing: '0.25em',
+                        color: '#6aafd6',
+                        fontWeight: '700',
+                        padding: '3px 10px',
+                        borderRadius: '4px',
+                        border: '1px solid #457b9d40',
+                        backgroundColor: '#457b9d10',
+                      }}>
+                        MYSTERY
+                      </span>
+                      <span style={{
+                        fontSize: '10px',
+                        color: '#555',
+                        letterSpacing: '0.15em',
+                      }}>
+                        特集ページ
+                      </span>
+                    </div>
+                    <p className="font-serif" style={{
+                      fontSize: '18px',
+                      fontWeight: '700',
+                      color: '#f8f9fa',
+                      margin: 0,
+                    }}>
+                      日本三奇<span style={{ color: '#6aafd6', fontSize: '0.8em', marginLeft: '8px', fontWeight: '400' }}>を探る</span>
+                    </p>
+                    <p style={{ fontSize: '12px', color: '#888', marginTop: '6px' }}>
+                      石の宝殿・天逆鉾・塩竈 — 古来より伝わる三つの不思議
+                    </p>
+                  </div>
+                  <svg
+                    className="group-hover:translate-x-1 transition-transform"
+                    width="22"
+                    height="22"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#457b9d"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
 

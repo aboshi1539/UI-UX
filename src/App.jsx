@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 import FestivalDetails from './pages/FestivalDetails';
 import HistoryDetails from './pages/HistoryDetails';
 import CultureDetails from './pages/CultureDetails';
+import MysteryRockDetails from './pages/MysteryRockDetails';
+import YassaDetails from './pages/YassaDetails';
+
 
 // 画像アセット
 import festivalImg from './assets/mikosi.jpeg';
@@ -61,6 +64,9 @@ function App() {
         <Route path="/festival" element={<FestivalDetails />} />
         <Route path="/history" element={<HistoryDetails />} />
         <Route path="/culture" element={<CultureDetails />} />
+        <Route path="/mystery-rock" element={<MysteryRockDetails />} />
+        <Route path="/yassa" element={<YassaDetails />} />
+
       </Routes>
 
       {/* フッター */}

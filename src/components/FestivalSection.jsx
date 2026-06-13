@@ -158,7 +158,67 @@ export default function FestivalSection({ imageSrc }) {
                 opacity: 0.12, filter: 'blur(4px)',
               }} />
             </div>
+
+            {/* 布団屋台・神輿リンク */}
+            <Link
+              to="/yassa"
+              className="group"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '12px',
+                marginTop: '24px',
+                padding: '14px 20px',
+                borderRadius: '12px',
+                border: '1px solid #e6394630',
+                background: 'linear-gradient(135deg, #130608 0%, #220b0e 60%, #0a0a0f 100%)',
+                textDecoration: 'none',
+                transition: 'all 0.35s ease',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.borderColor = '#e6394660';
+                e.currentTarget.style.boxShadow = '0 12px 40px #e6394618';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = '#e6394630';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div>
+                <span style={{
+                  fontSize: '10px',
+                  letterSpacing: '0.2em',
+                  color: '#e67885',
+                  fontWeight: '600',
+                }}>
+                  FESTIVAL
+                </span>
+                <p style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: '#f8f9fa',
+                  margin: '4px 0 0',
+                }}>
+                  布団屋台・神輿の種類<span style={{ color: '#e67885', fontSize: '0.85em', marginLeft: '6px', fontWeight: '400' }}>を見る →</span>
+                </p>
+              </div>
+              <svg
+                className="group-hover:translate-x-1 transition-transform"
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#e63946"
+                style={{ flexShrink: 0 }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
+
 
           {/* テキストエリア（右） */}
           <div
