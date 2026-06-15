@@ -18,10 +18,11 @@ const mysteries = [
     subtitle: '兵庫県高砂市・生石神社',
     description:
       '高さ約5.7m、幅約6.5m、奥行約7m、重さ約500トンの巨大な石造物。水面に浮かぶように見えることから「浮石」とも呼ばれます。誰が、何のために、どうやって造ったのか——今もなお謎に包まれた圧巻の遺跡です。',
-    highlights: ['重さ約500トン', '水面に浮かぶ「浮石」', '築造年代不明'],
+    highlights: [],
     color: '#457b9d',
     colorLight: '#6aafd6',
     isLocal: true,
+    prefecture: '兵庫県',
     image: rockImg,
   },
   {
@@ -30,9 +31,10 @@ const mysteries = [
     subtitle: '宮崎県高千穂峰・山頂',
     description:
       '霧島連山の高千穂峰（標高1,574m）の山頂に突き立つ青銅製の鉾。天孫降臨の神話にまつわる神器とされ、坂本龍馬が新婚旅行で引き抜いたという逸話でも知られています。',
-    highlights: ['標高1,574mの山頂', '天孫降臨の神話', '坂本龍馬の逸話'],
+    highlights: [],
     color: '#5a8f6e',
     colorLight: '#7cb893',
+    prefecture: '宮崎県',
     image: sakahokoImg,
   },
   {
@@ -41,9 +43,10 @@ const mysteries = [
     subtitle: '宮城県塩竈市・鹽竈神社',
     description:
       '鹽竈神社に伝わる四口の神竈（かまど）。古来より絶えることなく塩が焚かれ、その炎の色で吉凶を占う「藻塩焼神事」が毎年7月に行われます。製塩の神としての信仰が息づいています。',
-    highlights: ['四口の神竈', '藻塩焼神事', '製塩の神'],
+    highlights: [],
     color: '#9b6d4c',
     colorLight: '#c49a6c',
+    prefecture: '宮城県',
     image: shiogamaImg,
   },
 ];
@@ -204,173 +207,6 @@ export default function MysteryRockDetails() {
           </p>
         </div>
 
-        {/* ── 石の宝殿 ヒーローセクション（写真＋詳細） ── */}
-        <div style={{ marginBottom: '80px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
-            <div style={{
-              width: '40px', height: '3px',
-              background: 'linear-gradient(to right, #457b9d, #6aafd6)',
-              borderRadius: '2px',
-            }} />
-            <h2
-              className="font-serif"
-              style={{
-                fontSize: 'clamp(1.3rem, 3vw, 1.8rem)',
-                fontWeight: '700',
-                color: '#f8f9fa',
-                margin: 0,
-              }}
-            >
-              石の<span style={{ color: '#457b9d' }}>宝殿</span>
-              <span style={{ fontSize: '0.55em', color: '#6aafd6', marginLeft: '12px', fontWeight: '400' }}>
-                — 高砂のストーンヘンジ
-              </span>
-            </h2>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
-            {/* 写真エリア */}
-            <div className="w-full md:w-1/2">
-              {/* 石の宝殿画像 */}
-              <div
-                style={{
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 0 0 1px #457b9d25, 0 20px 60px #457b9d15',
-                  position: 'relative',
-                }}
-              >
-                <img
-                  src={rockImg}
-                  alt="石の宝殿"
-                  style={{
-                    width: '100%',
-                    aspectRatio: '4/3',
-                    objectFit: 'cover',
-                    display: 'block',
-                    transition: 'transform 0.7s ease',
-                  }}
-                  onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
-                  onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                />
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to top, #0a0a0f80, transparent)',
-                    pointerEvents: 'none',
-                  }}
-                />
-                {/* 日本三奇バッジ */}
-                <div style={{
-                  position: 'absolute', bottom: '16px', left: '16px',
-                  backgroundColor: '#457b9d',
-                  color: '#fff',
-                  fontSize: '11px', fontWeight: '700',
-                  letterSpacing: '0.15em',
-                  padding: '6px 14px',
-                  borderRadius: '6px',
-                }}>
-                  日本三奇 其の壱
-                </div>
-              </div>
-
-              {/* 生石神社画像 */}
-              <div
-                style={{
-                  marginTop: '24px',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 0 0 1px #457b9d25, 0 20px 60px #457b9d15',
-                  position: 'relative',
-                }}
-              >
-                <img
-                  src={ousikoImg}
-                  alt="生石神社"
-                  style={{
-                    width: '100%',
-                    aspectRatio: '4/3',
-                    objectFit: 'cover',
-                    display: 'block',
-                    transition: 'transform 0.7s ease',
-                  }}
-                  onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
-                  onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                />
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to top, #0a0a0f80, transparent)',
-                    pointerEvents: 'none',
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* 説明文エリア */}
-            <div className="w-full md:w-1/2">
-              <div className="detail-description">
-                <p className="text-gray-300 text-lg leading-relaxed font-light">
-                  生石神社（おうしこじんじゃ）のご神体として祀られる巨大な石造物。
-                  高さ約5.7m、横幅約6.5m、奥行約7m、重さ約500トン。
-                  三方を岩壁に囲まれた窪みの中に、水面に浮かぶように鎮座しています。
-                </p>
-
-                <p className="text-gray-300 text-lg leading-relaxed font-light">
-                  その起源は諸説あり、大穴牟遅命（おおなむちのみこと）と少毘古那命（すくなひこなのみこと）が
-                  国土経営のために一夜で造ろうとしたが夜明けまでに完成しなかったとの伝承が残されています。
-                </p>
-
-                <p className="text-gray-300 text-lg leading-relaxed font-light">
-                  近年では考古学的な調査も進み、古代の石造技術の高さを示す貴重な遺跡として
-                  学術的にも注目されています。しかし、誰が・何のために・どのような方法で造ったのか、
-                  その核心は依然として謎のままです。
-                </p>
-              </div>
-
-              {/* スペックカード */}
-              <div style={{
-                marginTop: '32px',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '12px',
-              }}>
-                {[
-                  { label: '高さ', value: '5.7m' },
-                  { label: '横幅', value: '6.5m' },
-                  { label: '重さ', value: '500t' },
-                ].map(spec => (
-                  <div key={spec.label} style={{
-                    textAlign: 'center',
-                    padding: '16px 8px',
-                    borderRadius: '12px',
-                    border: '1px solid #457b9d25',
-                    backgroundColor: '#457b9d08',
-                  }}>
-                    <div style={{
-                      fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
-                      fontWeight: '700',
-                      color: '#6aafd6',
-                      lineHeight: '1',
-                    }}>
-                      {spec.value}
-                    </div>
-                    <div style={{
-                      fontSize: '11px',
-                      color: '#888',
-                      marginTop: '6px',
-                      letterSpacing: '0.1em',
-                    }}>
-                      {spec.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* ═══════════════════════════════════════
             日本三奇の比較カード
@@ -391,14 +227,14 @@ export default function MysteryRockDetails() {
                 margin: 0,
               }}
             >
-              三つの<span style={{ color: '#457b9d' }}>不思議</span>
+              三つの<span style={{ color: '#457b9d' }}>不思議</span>：概要
             </h2>
           </div>
 
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '32px',
           }}>
             {mysteries.map((m, i) => (
               <div
@@ -411,8 +247,9 @@ export default function MysteryRockDetails() {
                   transition: 'all 0.4s ease',
                   position: 'relative',
                 }}
+                className="flex flex-col md:flex-row items-stretch"
                 onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
                   e.currentTarget.style.borderColor = `${m.color}60`;
                   e.currentTarget.style.boxShadow = `0 20px 60px ${m.color}18`;
                 }}
@@ -422,20 +259,28 @@ export default function MysteryRockDetails() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                {/* 上端カラーバー */}
+                {/* 左側のカラーアクセント線（縦長） */}
+                <div style={{
+                  width: '4px',
+                  background: `linear-gradient(to bottom, ${m.color}, ${m.colorLight})`,
+                }} className="hidden md:block" />
+
+                {/* 上端カラーバー（モバイル用） */}
                 <div style={{
                   height: '3px',
                   background: `linear-gradient(to right, ${m.color}, ${m.colorLight})`,
-                }} />
+                }} className="block md:hidden" />
 
-                {/* 画像エリア */}
+                {/* 画像エリア（左） */}
                 {m.image && (
-                  <div style={{
-                    width: '100%',
-                    height: '180px',
-                    overflow: 'hidden',
-                    position: 'relative',
-                  }}>
+                  <div 
+                    style={{
+                      position: 'relative',
+                      overflow: 'hidden',
+                      minHeight: '260px',
+                    }}
+                    className="w-full md:w-2/5 flex-shrink-0"
+                  >
                     <img
                       src={m.image}
                       alt={m.title}
@@ -443,10 +288,13 @@ export default function MysteryRockDetails() {
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        position: 'absolute',
+                        inset: 0,
                         transition: 'transform 0.6s ease',
                       }}
                       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
                       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                      loading="lazy"
                     />
                     <div style={{
                       position: 'absolute',
@@ -457,7 +305,16 @@ export default function MysteryRockDetails() {
                   </div>
                 )}
 
-                <div style={{ padding: '28px' }}>
+                {/* 説明文エリア（右） */}
+                <div 
+                  style={{ 
+                    padding: '32px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                  }}
+                  className="w-full md:w-3/5"
+                >
                   {/* ナンバーバッジ */}
                   <div style={{
                     display: 'flex',
@@ -466,33 +323,33 @@ export default function MysteryRockDetails() {
                     marginBottom: '16px',
                   }}>
                     <span style={{
-                      width: '32px', height: '32px',
-                      borderRadius: '8px',
-                      backgroundColor: `${m.color}18`,
-                      border: `1px solid ${m.color}40`,
-                      display: 'flex',
+                      display: 'inline-flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      fontSize: '13px',
+                      padding: '6px 14px',
+                      borderRadius: '6px',
+                      backgroundColor: `${m.color}18`,
+                      border: `1px solid ${m.color}40`,
+                      fontSize: '12px',
                       fontWeight: '700',
                       color: m.colorLight,
+                      whiteSpace: 'nowrap',
                     }}>
-                      {['壱', '弐', '参'][i]}
+                      {['日本三奇 其の壱', '日本三奇 其の弐', '日本三奇 其の参'][i]}
                     </span>
-                    {m.isLocal && (
+                    {m.prefecture && (
                       <span style={{
-                        fontSize: '10px',
-                        padding: '3px 10px',
+                        fontSize: '11px',
+                        padding: '4px 12px',
                         borderRadius: '20px',
-                        backgroundColor: `${m.color}15`,
+                        backgroundColor: `${m.color}10`,
                         color: m.colorLight,
-                        border: `1px solid ${m.color}40`,
-                        fontWeight: '600',
-                        letterSpacing: '0.1em',
+                        border: `1px solid ${m.color}25`,
                       }}>
-                        高砂市
+                        {m.prefecture}
                       </span>
                     )}
+                    
                   </div>
 
                   {/* タイトル */}

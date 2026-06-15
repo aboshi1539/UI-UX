@@ -126,7 +126,7 @@ export default function HistoryDetails() {
       >
 
         {/* 写真と説明文のコンテナ */}
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-stretch">
 
           {/* 写真エリア */}
           <div className="w-full md:w-1/2">
@@ -198,7 +198,7 @@ export default function HistoryDetails() {
           </div>
 
           {/* 説明文エリア */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
             {/* セクション内装飾ライン */}
             <div
               style={{
@@ -212,15 +212,13 @@ export default function HistoryDetails() {
 
             <div className="detail-description">
               <p className="text-gray-300 text-lg leading-relaxed font-light">
-                古くから海上交通の要衝として栄えた高砂は、日本の歴史と深く結びついています。
-                室町時代から続く謡曲「高砂」の舞台となった高砂神社は、
-                縁結びや長寿の象徴として全国的に知られています。
+                生石神社（おうしこじんじゃ）のご神体として祀られる、重さ約500トンの巨大な石造物。
+                水面に浮かぶように見えることから「浮石」とも呼ばれる、日本有数のミステリースポットです。
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed font-light">
-                江戸時代の面影を色濃く残す風情ある街並み、レトロなレンガ造りの建物群、
-                そして海辺へと続く細い路地。街を歩けば、千年の時を超えて息づく
-                悠久の歴史を感じることができます。
+                神が一夜で造ろうとした伝承など多くの謎に包まれています。
+                古代の石造技術の高さを示す貴重な遺跡として注目されつつも、誰が何のために造ったのか核心は依然として謎のままです。
               </p>
             </div>
 
@@ -231,7 +229,7 @@ export default function HistoryDetails() {
               style={{
                 display: 'block',
                 textDecoration: 'none',
-                marginTop: '32px',
+                marginTop: 'auto',
                 borderRadius: '16px',
                 overflow: 'hidden',
                 border: '1px solid #457b9d30',

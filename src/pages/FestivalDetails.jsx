@@ -126,27 +126,24 @@ export default function FestivalDetails() {
       >
 
         {/* 写真と説明文のコンテナ */}
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-stretch">
 
           {/* 写真エリア */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex flex-col justify-between">
             {/* メイン画像（mikosi.jpeg） */}
             <div
+              className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1"
               style={{
                 borderRadius: '20px',
                 overflow: 'hidden',
                 boxShadow: '0 0 0 1px #e6394625, 0 20px 60px #e6394615',
-                position: 'relative',
               }}
             >
               <img
                 src={festivalImg}
                 alt="曽根天満宮秋祭り"
+                className="w-full h-full object-cover block md:absolute md:inset-0"
                 style={{
-                  width: '100%',
-                  aspectRatio: '4/3',
-                  objectFit: 'cover',
-                  display: 'block',
                   transition: 'transform 0.7s ease',
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
@@ -164,23 +161,17 @@ export default function FestivalDetails() {
 
             {/* 2つ目の画像（yorunomikosi.jpeg） */}
             <div
+              className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 mt-8"
               style={{
-                marginTop: '32px',
                 borderRadius: '20px',
                 overflow: 'hidden',
                 boxShadow: '0 0 0 1px #e6394625, 0 20px 60px #e6394615',
-                position: 'relative',
               }}
             >
               <img
                 src={umeiMikosiImg}
                 alt="曽根天満宮秋祭り夜の部"
-                style={{
-                  width: '100%',
-                  aspectRatio: '4/3',
-                  objectFit: 'cover',
-                  display: 'block',
-                }}
+                className="w-full h-full object-cover block md:absolute md:inset-0"
               />
               <div
                 style={{
@@ -194,7 +185,7 @@ export default function FestivalDetails() {
           </div>
 
           {/* 説明文エリア */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
             {/* セクション内装飾ライン */}
             <div
               style={{
@@ -210,23 +201,24 @@ export default function FestivalDetails() {
               <p className="text-gray-300 text-lg leading-relaxed font-light">
                 毎年<span style={{ color: '#ffda7b', fontWeight: '600' }}>10月13日</span>と
                 <span style={{ color: '#ffda7b', fontWeight: '600' }}>10月14日</span>の二日間にわたって開催される曽根天満宮秋祭りは、
-                11台の巨大な「布団屋台」が激しく練り合わされる圧巻です。
-                約2トンを超える屋台が躍動する様は、播州最大級の熱気を誇ります。
+                11台の巨大な「布団屋台」が激しく練り合わされる播州最大級の熱気あふれるお祭りです。
+                約2トンを超える豪華絢爛な屋台が、氏子たちの威勢のいい掛け声とともに境内で躍動する姿は見る者を圧倒します。
               </p>
 
-              <p style={{ color: '#666', fontSize: '14px', marginBottom: '24px', marginTop: '8px' }}>
-                ※雨天時は10月15日に延期開催されます。
+              <p style={{ color: '#777', fontSize: '13px', marginTop: '16px' }}>
+                ※雨天時は10月15日に順延されます。
               </p>
 
-              <p className="text-gray-300 text-lg leading-relaxed font-light">
-                色鮮やかな布団屋台だけでなく、青竹を地面に叩きつけて割る「竹割り」や、
-                馬に乗った稚児が宮入りする「一ツ物神事」など、
-                古くから伝わる伝統的な神事も数多く行われ、歴史の深さを感じさせます。
+              <p className="text-gray-300 text-lg leading-relaxed font-light" style={{ marginTop: '16px' }}>
+                見どころは布団屋台の練り合わせだけでなく、神社の平穏と豊作を祈願する伝統行事にもあります。
+                青竹を地面に叩きつけて豪快に割る「竹割り神事」や、美しく着飾った稚児が馬に乗って宮入りする「一ツ物神事」など、
+                兵庫県の重要無形民俗文化財にも指定されている格式高い神事が数多く執り行われ、歴史の深さを感じさせます。
               </p>
+
             </div>
 
             {/* 布団屋台・神輿リンク */}
-            <div style={{ marginTop: '36px' }}>
+            <div style={{ marginTop: 'auto' }}>
               <Link
                 to="/yassa"
                 className="group"
