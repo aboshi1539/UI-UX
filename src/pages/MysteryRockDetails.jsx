@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import rockImg from '../assets/rock.jpg';
 import ousikoImg from '../assets/ousiko.jpg';
-import sakahokoImg from '../assets/sakahoko.png';
-import shiogamaImg from '../assets/shiogama_cauldron.png';
+import amanosakahokoImg from '../assets/amanosakahoko.jpg';
+import siogamaImg from '../assets/siogama.jpeg';
 
 /**
  * 日本三奇の詳細ページ
@@ -35,7 +35,7 @@ const mysteries = [
     color: '#5a8f6e',
     colorLight: '#7cb893',
     prefecture: '宮崎県',
-    image: sakahokoImg,
+    image: amanosakahokoImg,
   },
   {
     id: 'shiogama',
@@ -47,7 +47,7 @@ const mysteries = [
     color: '#9b6d4c',
     colorLight: '#c49a6c',
     prefecture: '宮城県',
-    image: shiogamaImg,
+    image: siogamaImg,
   },
 ];
 

@@ -209,19 +209,190 @@ export default function CultureDetails() {
               }}
             />
 
-            <div className="detail-description">
+            <div className="detail-description" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               <p className="text-gray-300 text-lg leading-relaxed font-light">
-                「謡曲の里」として広く知られる高砂では、能や狂言をはじめとする
-                日本の伝統芸能が、一部の愛好家だけでなく市民の暮らしのなかに
-                深く根付いています。
+                「謡曲の里」として広く知られる高砂では、能や狂言をはじめとする日本の伝統芸能が、一部の愛好家だけでなく市民の暮らしのなかに深く根付いています。その歴史は古く、世阿弥が作したとされる能の代表的演目「高砂」の舞台となったことから、高砂は「謡曲発祥の地」とも呼ばれ、古くから格式高い和の芸能とともに歩んできました。
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed font-light">
-                街の至る所から三味線や謡の稽古の声が聞こえ、茶道や華道、書道など、
-                豊かな和の文化が世代を超えて脈々と受け継がれており、
-                文化の香り高い洗練された日常を垣間見ることができます。
+                特に、演目の中に登場する「相生の松（あいおいのまつ）」は、根が一つで雌雄の幹が左右に分かれた非常に珍しい松であり、「夫婦睦まじく、ともに老いるまで」という長寿と夫婦円満の象徴とされています。この伝説から生まれた謡の一節「高砂や、この浦舟に帆を上げて…」は、古くから日本全国の結婚式などのお祝いの席で欠かせない祝言歌（しゅうげんか）として歌い継がれてきました。これにちなみ、高砂市は「ブライダル都市」としても広く知られています。
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* 謡曲の視聴セクション */}
+        <div style={{ marginTop: '80px' }}>
+          {/* セクションヘッダー */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
+            <div style={{
+              width: '40px', height: '3px',
+              background: 'linear-gradient(to right, #6b4c8a, #9b6dca)',
+              borderRadius: '2px',
+            }} />
+            <h2
+              className="font-serif"
+              style={{
+                fontSize: 'clamp(1.3rem, 3vw, 1.8rem)',
+                fontWeight: '700',
+                color: '#f8f9fa',
+                margin: 0,
+              }}
+            >
+              謡曲の<span style={{ color: '#9b6dca' }}>視聴</span>
+            </h2>
+          </div>
+
+          {/* 動画プレイヤーカード（クリックでYouTubeへ遷移） */}
+          <div
+            style={{
+              maxWidth: '800px',
+              margin: '0 auto',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              border: '1px solid #6b4c8a25',
+              boxShadow: '0 20px 60px #6b4c8a10',
+              background: 'linear-gradient(135deg, #100a18 0%, #0a0a0f 100%)',
+            }}
+          >
+            {/* 上端カラーバー */}
+            <div style={{ height: '3px', background: 'linear-gradient(to right, #6b4c8a, #9b6dca)' }} />
+
+            {/* 動画情報バー */}
+            <div
+              style={{
+                padding: '16px 24px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                borderBottom: '1px solid #6b4c8a15',
+              }}
+            >
+              {/* ビデオアイコン */}
+              <div
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '10px',
+                  backgroundColor: '#6b4c8a18',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9b6dca" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="23 7 16 12 23 17 23 7" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+              </div>
+              <div>
+                <p style={{ margin: 0, fontSize: '15px', fontWeight: '600', color: '#f8f9fa' }}>
+                  能の小謡を謡ってみよう ～高砂・待謡編～
+                </p>
+                <p style={{ margin: 0, fontSize: '13px', color: '#888', marginTop: '2px' }}>
+                  （解説・謡い方のレッスン付きYouTube動画）
+                </p>
+              </div>
+            </div>
+
+            {/* YouTubeサムネイルリンク */}
+            <a
+              href="https://www.youtube.com/watch?v=kYv9G_lMh8o"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              style={{
+                display: 'block',
+                position: 'relative',
+                width: '100%',
+                height: '0',
+                paddingBottom: '56.25%',
+                backgroundColor: '#000',
+                cursor: 'pointer',
+                overflow: 'hidden',
+              }}
+            >
+              {/* サムネイル画像 */}
+              <img
+                src="https://img.youtube.com/vi/kYv9G_lMh8o/maxresdefault.jpg"
+                alt="能の小謡を謡ってみよう ～高砂・待謡編～"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.75,
+                  transition: 'all 0.4s ease',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'scale(1.03)';
+                  e.currentTarget.style.opacity = '0.85';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.opacity = '0.75';
+                }}
+              />
+
+              {/* 再生ボタンとグラデーションオーバーレイ */}
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'linear-gradient(to top, rgba(16, 10, 24, 0.4) 0%, transparent 80%)',
+                  pointerEvents: 'none',
+                }}
+              >
+                {/* 再生アイコン */}
+                <div
+                  style={{
+                    width: '68px',
+                    height: '68px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(107, 76, 170, 0.9)',
+                    border: '2px solid rgba(255, 255, 255, 0.8)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 10px 30px rgba(107, 76, 170, 0.5)',
+                  }}
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#ffffff"
+                    style={{ marginLeft: '4px' }}
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* ガイドテキスト */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '20px',
+                  left: 0,
+                  right: 0,
+                  textAlign: 'center',
+                  color: '#ffffff',
+                  fontSize: '13px',
+                  fontWeight: '500',
+                  letterSpacing: '0.05em',
+                  textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+                }}
+              >
+                クリックするとYouTubeで再生します（外部サイトに移動します）
+              </div>
+            </a>
           </div>
         </div>
 
