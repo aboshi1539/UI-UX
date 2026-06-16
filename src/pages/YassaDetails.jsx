@@ -210,7 +210,8 @@ export default function YassaDetails() {
           }}>
             高砂の秋祭りを彩る主役、それが「布団屋台（ヤッサ）」と「神輿」です。
             特に、赤い布団を重ねた布団屋台は播州秋祭りの代名詞とも言われ、その重さは<span style={{ color: '#ffda7b' }}><u>２トン</u></span>を超えます。
-            ここでは、地域ごとに異なる屋台の造形美と、それぞれの違いについてご紹介します。
+            ここでは、高砂神社に集う布団屋台の造形美と、
+            布団の色や装飾の特徴について神輿を抜粋してご紹介します。
           </p>
         </div>
 
@@ -231,7 +232,7 @@ export default function YassaDetails() {
                 margin: 0,
               }}
             >
-              四つの<span style={{ color: '#e63946' }}>伝統の屋台</span>
+              <span style={{ color: '#e63946' }}>伝統の屋台</span>の紹介
             </h2>
           </div>
 
