@@ -227,7 +227,7 @@ export default function MysteryRockDetails() {
                 margin: 0,
               }}
             >
-              三つの<span style={{ color: '#457b9d' }}>不思議</span>：概要
+              日本<span style={{ color: '#457b9d' }}>三奇</span>：概要
             </h2>
           </div>
 
@@ -273,7 +273,7 @@ export default function MysteryRockDetails() {
 
                 {/* 画像エリア（左） */}
                 {m.image && (
-                  <div 
+                  <div
                     style={{
                       position: 'relative',
                       overflow: 'hidden',
@@ -306,8 +306,8 @@ export default function MysteryRockDetails() {
                 )}
 
                 {/* 説明文エリア（右） */}
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     padding: '32px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -349,7 +349,7 @@ export default function MysteryRockDetails() {
                         {m.prefecture}
                       </span>
                     )}
-                    
+
                   </div>
 
                   {/* タイトル */}
