@@ -227,7 +227,7 @@ export default function MysteryRockDetails() {
                 margin: 0,
               }}
             >
-              日本<span style={{ color: '#457b9d' }}>三奇</span>：概要
+              日本<span style={{ color: '#457b9d' }}>三奇</span>：概要：
             </h2>
           </div>
 
