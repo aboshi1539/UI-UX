@@ -416,52 +416,6 @@ export default function YassaDetails() {
         {/* ナビゲーションカード */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
 
-          {/* 文化カード */}
-          <Link
-            to="/culture"
-            className="group"
-            style={{
-              display: 'block',
-              textDecoration: 'none',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              border: '1px solid #6b4c8a30',
-              background: 'linear-gradient(135deg, #100a18 0%, #0a0a0f 100%)',
-              transition: 'all 0.3s ease',
-              position: 'relative',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.borderColor = '#6b4c8a60';
-              e.currentTarget.style.boxShadow = '0 12px 40px #6b4c8a20';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = '#6b4c8a30';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
-          >
-            {/* 上端カラーバー */}
-            <div style={{ height: '3px', background: 'linear-gradient(to right, #6b4c8a, #9b6dca)' }} />
-            <div style={{ padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <div>
-                <span style={{ fontSize: '11px', letterSpacing: '0.25em', color: '#9b6dca', fontWeight: '600' }}>CULTURE</span>
-                <p style={{ fontSize: '22px', fontWeight: '700', color: '#f8f9fa', marginTop: '6px' }}>文化</p>
-                <p style={{ fontSize: '13px', color: '#8a6bb5', marginTop: '4px' }}>暮らしに息づく和の心</p>
-              </div>
-              <svg
-                className="group-hover:translate-x-1 transition-transform"
-                width="22"
-                height="22"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="#9b6dca"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
-          </Link>
-
           {/* 歴史カード */}
           <Link
             to="/history"
@@ -502,6 +456,52 @@ export default function YassaDetails() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="#457b9d"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          </Link>
+
+          {/* 文化カード */}
+          <Link
+            to="/culture"
+            className="group"
+            style={{
+              display: 'block',
+              textDecoration: 'none',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '1px solid #6b4c8a30',
+              background: 'linear-gradient(135deg, #100a18 0%, #0a0a0f 100%)',
+              transition: 'all 0.3s ease',
+              position: 'relative',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.borderColor = '#6b4c8a60';
+              e.currentTarget.style.boxShadow = '0 12px 40px #6b4c8a20';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = '#6b4c8a30';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            {/* 上端カラーバー */}
+            <div style={{ height: '3px', background: 'linear-gradient(to right, #6b4c8a, #9b6dca)' }} />
+            <div style={{ padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <span style={{ fontSize: '11px', letterSpacing: '0.25em', color: '#9b6dca', fontWeight: '600' }}>CULTURE</span>
+                <p style={{ fontSize: '22px', fontWeight: '700', color: '#f8f9fa', marginTop: '6px' }}>文化</p>
+                <p style={{ fontSize: '13px', color: '#8a6bb5', marginTop: '4px' }}>暮らしに息づく和の心</p>
+              </div>
+              <svg
+                className="group-hover:translate-x-1 transition-transform"
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9b6dca"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
